@@ -1,4 +1,4 @@
-import {bootstrap, view, Component, FORM_DIRECTIVES, CORE_DIRECTIVES} from '../../../node_modules/angular2/angular2.d';
+import {bootstrap, view, Component, FORM_DIRECTIVES, CORE_DIRECTIVES} from 'angular2/angular2';
 
 @Component({
     selector: 'my-app',
@@ -15,10 +15,6 @@ class AppComponent {
     public selectedHero: Hero;
     onSelect(hero: Hero) {
         this.selectedHero = hero;
-        console.log(hero)
-    }
-    onClickMe(){
-        alert('You are my hero!')
     }
     getSelectedClass(hero: Hero) {
         return { 'selected': hero === this.selectedHero };

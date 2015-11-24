@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc -p src -w",
+    "tsc": "tsc -p src",
     "start": "live-server --open=src"
   },
   "keywords": [],
