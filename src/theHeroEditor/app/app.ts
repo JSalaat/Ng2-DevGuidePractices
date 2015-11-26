@@ -1,4 +1,4 @@
-import {bootstrap, view, Component, FORM_DIRECTIVES, CORE_DIRECTIVES} from 'angular2/angular2';
+import {bootstrap, Component, FORM_DIRECTIVES, CORE_DIRECTIVES} from 'angular2/angular2';
 
 @Component({
     selector: 'my-app',
