@@ -1,0 +1,44 @@
+<div class="container">
+    <h4>Little Tour of Heroes</h4>
+    <div class="row">
+        <div class="col-xs-6">
+            <input #new-hero class="form-control"
+                   (keyup.enter)="addHero(newHero)"
+                   (blur)="addHero(newHero)">
+        </div>
+        <div class="col-xs-6">
+            <button (click)=addHero(newHero) class="btn btn-primary">Add</button>
+        </div>
+    </div>
+    <ul><li *ng-for="#hero of heroes">{{hero}}</li></ul>
+
+    <br/>
+    <br/>
+
+    <button (click)="onClickMe()" class="btn btn-primary">Click me</button>
+
+    <br/>
+    <br/>
+
+    <h4>Give me some keys!</h4>
+    <div><input (keyup)="onKey($event)" class="form-control"></div>
+    <div>{{values}}</div>
+
+    <br/>
+
+    <input #box (keyup)="0" class="form-control"> <p>{{box.value}}</p>
+    <br/>
+
+    <h4>Type away! Press [enter]</h4>
+    <input #box2 (keyup.enter)="onKeyV2(box2.value)" class="form-control"> <p>{{valuesV2}}</p>
+
+    <br/>
+
+    <h4>Type away! Press [enter] or mouse away when done.</h4>
+    <div>
+        <input #box3 class="form-control"
+               (keyup.enter)="valuesV3=box3.value"
+               (blur)="valuesV3=box3.value">
+    </div>
+    <div>{{valuesV3}}</div>
+</div>
