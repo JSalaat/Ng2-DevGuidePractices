@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Pipes</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="../../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script>
+      System.config({
+        packages: {'app': {defaultExtension: 'js'}}
+      });
+      //    Remove comments for ts file actions
+      System.import('app/hero-list-pipe');
+      //System.import('app/async-pipe');
+      //      System.import('app/power-boost-calculator.ts');
+      //      System.import('app/datePipe.ts');
+      //      System.import('app/app');
+    </script>
+  </head>
+  <body>
+
+  <!-- Remove comments for ts file actions-->
+    <hero-list>loading...</hero-list>
+    <!--<my-hero>loading...</my-hero>-->
+    <!--<power-boost-calculator.ts>loading...</power-boost-calculator.ts>-->
+    <!--<hero-birthday>loading...</hero-birthday>-->
+    <!--<power-booster>loading...</power-booster>-->
+  </body>
+</html>

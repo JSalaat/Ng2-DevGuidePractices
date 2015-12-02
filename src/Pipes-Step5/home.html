@@ -1,0 +1,20 @@
+<div class="container">
+    <p>The hero's birthday is {{ birthday | date }}</p>
+
+    <p>The hero's birthday is {{ birthday | date:"MM/dd/yy" }} </p>
+
+    <p>The hero's birthday is {{ birthday | date:format }}</p>
+    <button class="btn btn-default" (click)="toggleFormat()">Toggle Format</button>
+
+    <p>
+        The chained hero's birthday is
+        {{ birthday | date | uppercase}}
+    </p>
+
+    <p>
+        The chained hero's birthday is
+        {{ ( birthday | date:'fullDate' ) | uppercase}}
+    </p>
+
+
+</div>
