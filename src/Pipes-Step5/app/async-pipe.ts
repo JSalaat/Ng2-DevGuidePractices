@@ -3,7 +3,7 @@
  */
 import {Component, FORM_DIRECTIVES, bootstrap} from 'angular2/angular2'
 @Component({
-    selector: 'my-hero',
+    selector: 'async-pipe',
     template: 'Message: {{delayedMessage | async}}',
 })
 class MyHeroAsyncMessageComponent {

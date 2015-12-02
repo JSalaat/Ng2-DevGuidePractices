@@ -1,7 +1,7 @@
 import {Component, bootstrap} from 'angular2/angular2'
 import {ExponentialStrengthPipe} from './exponential-strength-pipe'
 @Component({
-    selector: 'power-booster',
+    selector: 'app-power-booster',
     template: `
     <div class="container"><h2>Power Booster</h2>
     <p>

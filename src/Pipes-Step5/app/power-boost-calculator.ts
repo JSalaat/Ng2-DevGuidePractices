@@ -7,12 +7,13 @@ import {ExponentialStrengthPipe} from './exponential-strength-pipe'
 @Component({
     selector: 'power-boost-calculator',
     template: `
+    <div class="container">
     <h2>Power Boost Calculator</h2>
     <div>Normal power: <input [(ng-model)]="power"></div>
     <div>Boost factor: <input [(ng-model)]="factor"></div>
     <p>
       Super Hero Power: {{power | exponentialStrength: factor}}
-    </p>
+    </p></div>
   `,
     pipes: [ExponentialStrengthPipe],
     directives: [FORM_DIRECTIVES]

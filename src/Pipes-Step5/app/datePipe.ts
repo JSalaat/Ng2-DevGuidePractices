@@ -4,7 +4,7 @@
 
 import {bootstrap, Component} from 'angular2/angular2'
 @Component({
-    selector: 'hero-birthday',
+    selector: 'date-pipe-hero-birthday',
     templateUrl: `home.html`
 })
 
