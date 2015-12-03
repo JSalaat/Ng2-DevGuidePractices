@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular2 Router Playground</title>
+    <base href="/#">
+</head>
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<!-- ES6-related imports -->
+<script src="../../node_modules/systemjs/dist/system.src.js"></script>
+<script src="../../node_modules/angular2/bundles/angular2.dev.js"></script>
+<script src="../../node_modules/angular2/bundles/router.dev.js"></script>
+<script src="../../node_modules/angular2/bundles/http.js"></script>
+
+<script>
+    System.config({
+        packages: {'app': {defaultExtension: 'js'}}
+    });
+</script>
+<script>
+    //bootstrap the Angular2 application
+    System.import('src/ng2-Routing/app/index.js').catch(console.log.bind(console));
+</script>
+
+<body>
+    <app>Loading...</app>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<div class="container">
+    <div [hidden]="submitted">
+        <h1>Subscribe Form</h1>
+        <form (ng-submit)="onSubmit()" #hf="form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text"  class="form-control" required
+                       [(ng-model)]="model.name"
+                       ng-control="name" #name="form"> <!--Local template var-->
+                <div [hidden]="name.valid" class="alert alert-danger"> <!--like the ng-hide attr-->
+                    Name is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phoneNo">Phone No</label>
+                <input type="number" class="form-control"
+                       [(ng-model)]="model.phoneNo">
+            </div>
+            <div class="form-group">
+                <label for="email">Hero Email</label>
+                <input type="email"  class="form-control" required
+                       [(ng-model)]="model.email"
+                       ng-control="email" #email="form">
+            </div>
+            <button type="submit" class="btn btn-default"
+                    [disabled]="!hf.form.valid">Submit</button>
+        </form>
+    </div>
+    <div [hidden]="!submitted">
+        <h2>You submitted the following:</h2>
+        <div class="row">
+            <div class="col-xs-3">Name</div>
+            <div class="col-xs-9  pull-left">{{ model.name }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">Phone No</div>
+            <div class="col-xs-9 pull-left">{{ model.phoneNo }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">email</div>
+            <div class="col-xs-9 pull-left">{{ model.email }}</div>
+        </div>
+        <br>
+        <button class="btn btn-default" (click)="submitted=false">Edit</button>
+    </div>
+</div>
